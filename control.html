@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/ctrl.js"></script>
+</head>
+<body>
+    <div class="border_radius_container">
+
+       
+
+        <h1>Border Radius Generator</h1>
+
+        <div class="container_toggle">
+            <p class="toggle_p">Custom size</p>
+            <div class="swich_div">
+                <input onclick="check_custom_size()" type="checkbox" id="custom_size_check">
+            </div>
+        </div>
+        <div id="on_off_wh">
+            <div>width: <span id="width_value">300</span>px;</div>
+            <input oninput="get_range_bar_value()" id="range_width" class="range_wh" type="range" min="100" max="1200" step="10" value="300">
+
+            <div>height: <span id="height_value">300</span>px;</div>
+            <input oninput="get_range_bar_value()" id="range_height" class="range_wh" type="range" min="100" max="1200" step="10" value="300">
+        </div>
+        <div class="tag_css_value">
+            <div class="now_rap_bold" id="c">
+                border-redius: 
+            </div>
+            <input  type="text" id="input_value" tabindex="-1" value="60% 40% 50% 50% / 30% 45% 55% 70%;">
+            <button onclick="copy_border_radius()" id="btn_focus">Copy</button>
+        </div>
+        
+        <div class="border_radius">
+            <input oninput="get_range_bar_value()" id="r1" class="range_bar" type="range" min="0" max="100" value="60">
+            <input oninput="get_range_bar_value()" id="r2" class="range_bar" type="range" min="0" max="100" value="50">
+            <input oninput="get_range_bar_value()" id="r3" class="range_bar" type="range" min="0" max="100" value="70">
+            <input oninput="get_range_bar_value()" id="r4" class="range_bar" type="range" min="0" max="100" value="45">
+            <div class="border_box"></div>
+        </div>
+    
+
+    </div>    
+</body>
+</html>

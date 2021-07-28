@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: asap;
+    src: url(../font/asap.ttf);
+}
+
+body{
+    background: #FFFFF2;
+    font-family: asap;
+    font-size: 18px;
+    color: #1B1B1B;
+ 
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+  
+}
+
+:root{
+    /* border radius */
+    --br1: 60%;
+    --br2: 40%;
+    --br3: 50%;
+    --br4: 50%;
+    --br5: 30%;
+    --br6: 45%;
+    --br7: 55%;
+    --br8: 70%;
+    /* height / width for squere with border radius */
+    --height_s: 300px;
+    --width_s: 300px;
+}
+
+/*
+
+Range bar custom 
+
+
+*/
+.range_bar {
+    position: absolute;
+    -webkit-appearance: none;
+    height: 6px;
+    background: rgba(0, 0, 0, 0);
+}
+
+.range_bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #1B1B1B;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+.range_bar::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: #1B1B1B;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.range_bar:nth-child(1) {
+    width: var(--width_s);
+    top: -2px;
+}
+
+.range_bar:nth-child(2) {
+    width: var(--width_s);
+    transform: rotate(180deg);
+    top: calc(var(--height_s) - 3px);
+    left: 0;
+}
+
+.range_bar:nth-child(3) {
+    width: var(--height_s);
+    transform: rotate(270deg);
+    left: calc(var(--height_s)/ -2);
+    top: calc(var(--height_s)/2 - 3px);
+}
+
+.range_bar:nth-child(4) {
+    width: var(--height_s);
+    transform: rotate(90deg);
+    top: calc(var(--height_s)/2 - 3px);
+    left: calc((var(--height_s)/ -2) + var(--width_s));
+}
+
+
+/*
+
+Custom border radius 
+
+
+*/
+.border_radius{
+    width: var(--width_s);
+    height: var(--height_s);
+    border-radius: var(--br1) var(--br2) var(--br3) var(--br4) / var(--br5) var(--br6) var(--br7) var(--br8);
+    margin-top: 25px;
+    position: relative;
+    left: 50%;
+    transform: translateX( -50%);
+    background-image: linear-gradient(45deg, #930077, #E61C5D, #FFB300);
+}
+
+.border_box {
+
+    width: 100%;
+    height: 100%;
+    border: dashed 2px #1B1B1B;
+}
+
+/*
+
+Text
+
+
+*/
+
+/* custom css value section */
+/*       Border radius      */
+.tag_css_value {
+    text-align: center;
+}
+.now_rap_bold {
+    font-weight: 700;
+    display: inline-block;
+}
+
+.now_rap {
+    display: inline-block;
+}
+
+#input_value {
+    font-size: 1em;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    width: 34ch;
+    pointer-events: none; 
+}
+
+
+/* custom css toggle button */
+/*        Custom Size       */
+h1 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.container_toggle {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    margin: 20px 0 20px 0;
+        
+}
+
+.toggle_p {
+    font-size: 1.618em;
+}
+
+#on_off_wh {
+    display: none;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+/*       Toggle Button Custom     */
+
+input[type="checkbox"] {
+    position: relative;
+    margin: 7px 0 0px 10px;
+    width: 45px;
+    height: 22.5px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #DDD;
+    outline: none;
+    border-radius: 11.5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .5);
+    transition: .5s;
+}
+
+input:checked[type="checkbox"]{
+    background: #FFF;
+}
+
+input[type="checkbox"]:before{
+    content: '';
+    position: absolute;
+    width: 22.5px;
+    height: 22.5px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    background: #1B1B1B;
+    transform: scale(1.1);
+    transition: .5s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+input:checked[type="checkbox"]:before{
+    left: 22.5px;
+}
+
+
+/* custom css custom size bar */
+/*       Custom Size Bar      */
+
+.range_wh {
+    -webkit-appearance: none;
+    width: 300px;
+    height: 20px;
+    background: #FFF;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .5);
+}
+
+.range_wh::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #1B1B1B;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.range_wh::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #1B1B1B;
+    cursor: pointer;
+}
+
+#btn_focus {
+    font-size: 1em;
+    background: #FFF;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .5);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
