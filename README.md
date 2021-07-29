@@ -1,9 +1,9 @@
 # Border-Radius-Generator
 Create extraordinary borders, because it's much easier to create them visually. Modify the CSS properties with JavaScript.
 
-The Technologies Used:
--CSS
--JavaScript    
+The Technologies Used:<br>
+-CSS<br>
+-JavaScript  <br>  
 
 CSS<br>
 -I used CSS to stylize the elements created in HTML <br>
